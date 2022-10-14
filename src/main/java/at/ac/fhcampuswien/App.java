@@ -109,6 +109,29 @@ public class App {
 
     //todo Task 6
     public void happyNumbers(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("n: ");
+        int num = sc.nextInt();
+        int rem = 0;
+        int sum = 0;
+
+        while (num != 1) {
+            sum = 0;
+            while (num != 0) {
+                rem = num % 10;
+                sum = sum + (rem * rem);
+                num = num / 10;
+            }
+            num = sum;
+
+            if (num == 4) {
+                System.out.println("Sad number!");
+            }
+        }
+        System.out.println("Happy number!");
+
+
         // input your solution here
     }
 
