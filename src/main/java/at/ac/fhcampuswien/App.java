@@ -72,6 +72,45 @@ public class App {
 
     //todo Task 4
     public void printRhombus(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("h: ");
+        int h = sc.nextInt();
+
+        System.out.print("c: ");
+        char c = sc.next().charAt(0);
+
+        int sp = h/2;
+
+        if (h%2 == 1) {
+            for (int i = 0; i < h/2; i++) {
+                for (int j = 0; j < sp - i; j++) {
+                    System.out.print(" ");
+                }
+                for (int j = c - i; j <= c; j++) {
+                    System.out.print((char)j);
+                }
+                for (int j = 0; j < i; j++) {
+                    System.out.print((char)(c-j-1));
+                }
+                System.out.println();
+            }
+
+            sp = 0;
+            for (int i = h/2; i >= 0; i--) {
+                for (int j = 0; j < sp; j++){
+                    System.out.print(" ");
+                }
+                for (int j = i; j >= 0; j--) {
+                    System.out.print((char)(c-j));
+                }
+                for (int j = 1; j <= i; j++) {
+                    System.out.print((char)(c-j));
+                }
+                System.out.println("");
+                sp = sp + 1;
+            }
+        } else System.out.println("Invalid number!");
         // input your solution here
     }
 
