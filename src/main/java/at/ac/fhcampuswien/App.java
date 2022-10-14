@@ -6,13 +6,39 @@ public class App {
 
     //todo Task 1
     public void largestNumber(){
+        int count = 1;
+        double largest;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Number " + count++ + ": ");
+        double number = largest = sc.nextDouble();
+
+        if (largest < number) {
+            largest = number;
+
+            if (number <= 0) {
+                System.out.println("No number entered");
+            } else
+                while (number != 0) {
+                    System.out.print("Number " + count++ + ": ");
+                    number = sc.nextDouble();
+
+                }
+
+
+        }
+
+
         // input your solution here
     }
 
     //todo Task 2
-    public void stairs(){
-        // input your solution here
-    }
+    public void stairs() {
+
+
+            // input your solution here
+        }
+
 
     //todo Task 3
     public void printPyramid(){
